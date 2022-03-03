@@ -4,7 +4,6 @@ go 1.17
 
 require (
 	github.com/digineo/go-dhclient v1.0.2
-	github.com/dustin/go-humanize v1.0.0
 	github.com/google/gopacket v1.1.19
 	github.com/plunder-app/BOOTy v0.0.0-20200518120353-f6ab2a94406b
 	github.com/sirupsen/logrus v1.8.1
