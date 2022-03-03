@@ -71,7 +71,7 @@ func main() {
 		log.Errorf("Disk Error: [%v]", err)
 	}
 
-	cmd := exec.Command("/usr/sbin/chroot", stuffs["entrypoint"])
+	cmd := exec.Command("/usr/sbin/chroot", []string{"/mnt", stuffs["entrypoint"]}...)
 	cmd.Stdin, cmd.Stdout, cmd.Stderr = os.Stdin, os.Stdout, os.Stderr
 
 	err = cmd.Start()
