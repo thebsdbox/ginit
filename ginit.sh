@@ -31,4 +31,4 @@ docker buildx build  --platform linux/amd64 --load -t ginit:0.0 -f initrd.Docker
 docker create --name exporter ginit:0.0 null
 docker cp exporter:/initramfs.cpio.gz initramfs.cpio.gz ; docker rm exporter
 echo "Here is a command you can run"
-echo "qemu-system-x86_64 -nographic -kernel ./linux -append "root=/dev/sda console=ttyS0" -initrd ./initramfs.cpio.gz"
+echo 'qemu-system-x86_64 -nographic -kernel ./linux -append "root=/dev/sda console=ttyS0" -initrd ./initramfs.cpio.gz'
